@@ -40,14 +40,14 @@ enum MessageType {
 }
 
 export class ChatGPTBot {
-  botName: string = "";
+  botName: string = "兔兔";
   chatgptTriggerKeyword = Config.chatgptTriggerKeyword;
   OpenAIConfig: any; // OpenAI API key
   OpenAI: any; // OpenAI API instance
 
   // Chatgpt fine-tune for being a chatbot (guided by OpenAI official document)
   applyContext(text: string): string {
-    return `You are an rabbit-like artificial intelligence bot from a company called "兔兔". Your primary tasks are chatting with users and answering their questions.\nIf the user says: ${text}.\nYou will say: `;
+    return `You are an rabbit-like artificial intelligence bot from a company called "rabbit". Your primary tasks are chatting with users and answering their questions.\nIf the user says: ${text}.\nYou will say: `;
   }
 
   setBotName(botName: string) {
