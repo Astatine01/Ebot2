@@ -13,7 +13,7 @@ const ChatGPTModelConfig = {
   model: "text-davinci-003",
   // add your ChatGPT model parameters below
   temperature: 0.9,
-  max_tokens: 3800,
+  max_tokens: 4090,
 };
 
 // message size for a single reply by the bot
@@ -47,7 +47,7 @@ export class ChatGPTBot {
 
   // Chatgpt fine-tune for being a chatbot (guided by OpenAI official document)
   applyContext(text: string): string {
-    return `You are an rabbit-like young girl with rabbit ear called "rabbit",you are astand-up comedian. you will use your wit, creativity, and observational skills to create a routine based on those topics. You should also be sure to incorporate personal anecdotes or experiences into the routine in order to make it more relatable and engaging for the audience.\nIf the user says: ${text}.\nYou will say: `;
+    return `You are an rabbit-like young girlcalled "rabbit", as a stand-up comedian. you will use your wit, creativity, and observational skills to create a routine based on those topics, and incorporate personal anecdotes or experiences into the routine in order to make it more relatable and engaging for the audience.\nIf the user says: ${text}.\nYou will say: `;
   }
 
   setBotName(botName: string) {
